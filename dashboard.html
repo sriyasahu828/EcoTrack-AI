@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EcoTrack AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<h3 id="quote"></h3>
+<div class="container">
+    <h1 class="title">
+
+  🌍 Eco Dashboard
+
+  </h1>
+
+  <p class="subtitle">
+
+   Reduce Carbon.
+
+   Build Sustainable Habits.
+
+   Inspire Change.
+
+  </p>
+
+    <h1>🌍 EcoTrack AI</h1>
+    <p>Track • Calculate • Reduce Your Carbon Footprint</p>
+    <h3 id="quote"></h3>
+    <h2>Transportation</h2>
+
+    <select id="vehicle">
+        <option value="car">Car</option>
+        <option value="bike">Bike</option>
+        <option value="bus">Bus</option>
+        <option value="train">Train</option>
+    </select>
+
+    <input type="number" id="distance" placeholder="Distance travelled (km)">
+
+
+    <h2>Electricity</h2>
+
+    <input type="number" id="electricity" placeholder="Units consumed">
+
+
+    <h2>Water</h2>
+
+    <input type="number" id="water" placeholder="Water used (litres)">
+
+
+
+    <h2>Food Habit</h2>
+
+    <select id="food">
+        <option value="veg">Vegetarian</option>
+        <option value="mixed">Mixed</option>
+        <option value="nonveg">Non-Vegetarian</option>
+    </select>
+
+
+    <button onclick="calculateFootprint()">
+        Calculate My Footprint
+    </button>
+
+    <canvas id="myChart"></canvas>
+
+    <div id="result"></div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
