@@ -185,15 +185,15 @@ margin-bottom:20px;
 }
 #result{
 
-margin-top:30px;
+margin-top:50px;
 
-padding:20px;
+padding:40px;
 
 background:#f8fff8;
 
-border-radius:20px;
+border-radius:30px;
 
-box-shadow:0px 5px 20px rgba(0,0,0,0.1);
+color:#222;
 
 }
 
@@ -205,21 +205,30 @@ color:#008000;
 }
 
 
-#result h3{
+#result h2{
 
-color:#006400;
+color:#1b5e20;
 
 }
 
 
-#result ul{
+#result h3{
 
-padding-left:30px;
+color:#2e7d32;
+
+}
+
+
+#result p{
+
+color:#444;
 
 }
 
 
 #result li{
+
+color:#444;
 
 margin-bottom:10px;
 
