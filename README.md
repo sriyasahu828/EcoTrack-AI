@@ -143,7 +143,42 @@ script.js
 README.md
 ```
 
----
+## Testing
+
+The application was tested with multiple user scenarios.
+
+### Test Case 1
+
+Input:
+
+- Vehicle: Car
+- Distance: 20 km
+- Electricity: 150 units
+- Water: 120 litres
+- Food Habit: Mixed
+
+Output:
+
+- Carbon footprint calculated
+- Emission breakdown chart generated
+- AI suggestions displayed
+- Green points awarded
+
+### Test Case 2
+
+Input:
+
+- Vehicle: Metro
+- Distance: 15 km
+- Electricity: 80 units
+- Water: 90 litres
+- Food Habit: Vegetarian
+
+Output:
+
+- Lower emissions
+- Eco Hero badge awarded
+- Personalized sustainability recommendations
 
 ## Future Enhancements
 

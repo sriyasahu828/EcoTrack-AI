@@ -2,6 +2,25 @@
 let chart;
 
 function calculateFootprint() {
+    if(
+
+distance<0 ||
+
+electricity<0 ||
+
+water<0
+
+){
+
+alert(
+
+"Please enter valid positive values."
+
+);
+
+return;
+
+}
 
     let vehicle =
     document.getElementById("vehicle").value;
