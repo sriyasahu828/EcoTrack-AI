@@ -1,79 +1,375 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>EcoTrack AI</title>
-    <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EcoTrack Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
-<h3 id="quote"></h3>
-<div class="container">
-    <h1 class="title">
-
-  🌍 Eco Dashboard
-
-  </h1>
-
-  <p class="subtitle">
-
-   Reduce Carbon.
-
-   Build Sustainable Habits.
-
-   Inspire Change.
-
-  </p>
-
-    <h1>🌍 EcoTrack AI</h1>
-    <p>Track • Calculate • Reduce Your Carbon Footprint</p>
-    <h3 id="quote"></h3>
-    <h2>Transportation</h2>
-
-    <label for="vehicle">Transportation Mode</label>
-    <select id="vehicle">
-        <option value="car">Car</option>
-        <option value="bike">Bike</option>
-        <option value="bus">Bus</option>
-        <option value="train">Train</option>
-    </select>
-
-    <input type="number" id="distance" placeholder="Distance travelled (km)">
 
 
-    <h2>Electricity</h2>
-
-    <label for="electricity">Electricity Consumption</label>
-    <input type="number" id="electricity" placeholder="Units consumed">
+<div class="dashboard-container">
 
 
-    <h2>Water</h2>
+    <!-- SIDEBAR -->
 
-    <label for="water">Water Usage</label>
-    <input type="number" id="water" placeholder="Water used (litres)">
+    <div class="sidebar">
+
+        <h2>
+
+            🌱 EcoTrack AI
+
+        </h2>
+
+
+        <ul>
+
+            <li>🏠 Dashboard</li>
+
+            <li>📊 Footprint</li>
+
+            <li>🤖 AI Coach</li>
+
+            <li>🏆 Achievements</li>
+
+            <li>📜 History</li>
+
+        </ul>
+
+
+        <div class="sidebar-footer">
+
+            Every action matters!
+
+        </div>
+
+    </div>
 
 
 
-    <h2>Food Habit</h2>
 
-    <label for="food">Food Habit</label>
-    <select id="food">
-        <option value="veg">Vegetarian</option>
-        <option value="mixed">Mixed</option>
-        <option value="nonveg">Non-Vegetarian</option>
-    </select>
+    <!-- MAIN -->
+
+    <div class="main-content">
 
 
-    <button onclick="calculateFootprint()">
-        Calculate My Footprint
-    </button>
+        <!-- HERO -->
 
-    <canvas id="myChart"></canvas>
+        <div class="hero-card">
 
-    <div id="result"></div>
+            <div>
+
+                <h1>
+
+                    Welcome Back!
+
+                </h1>
+
+                <p>
+
+                    Your Carbon Footprint
+
+                </p>
+
+
+                <h2>
+
+                    3.42 kg CO₂
+
+                </h2>
+
+
+                <p class="green" id="hero-status">
+
+                    ↓ 12% below average
+
+                </p>
+
+            </div>
+
+
+            <div class="hero-earth">
+
+                🌍
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CALCULATOR -->
+
+        <div class="calculator">
+
+
+            <div class="card">
+
+                <h3>
+
+                    🚗 Transportation
+
+                </h3>
+
+                <select id="vehicle">
+
+                    <option>car</option>
+
+                    <option>bike</option>
+
+                    <option>bus</option>
+
+                    <option>metro</option>
+
+                </select>
+
+
+                <input
+
+                id="distance"
+
+                type="number"
+
+                placeholder="Distance in km">
+
+            </div>
+
+
+
+
+            <div class="card">
+
+                <h3>
+
+                    ⚡ Electricity
+
+                </h3>
+
+
+                <input
+
+                id="electricity"
+
+                type="number"
+
+                placeholder="Units consumed">
+
+            </div>
+
+
+
+
+            <div class="card">
+
+                <h3>
+
+                    💧 Water Usage
+
+                </h3>
+
+
+                <input
+
+                id="water"
+
+                type="number"
+
+                placeholder="Litres per day">
+
+            </div>
+
+
+
+
+            <div class="card">
+
+                <h3>
+
+                    🍔 Food Habit
+
+                </h3>
+
+
+                <select id="food">
+
+                    <option value="veg">
+
+                        Vegetarian
+
+                    </option>
+
+
+                    <option value="mixed">
+
+                        Mixed
+
+                    </option>
+
+
+                    <option value="nonveg">
+
+                        Non Vegetarian
+
+                    </option>
+
+                </select>
+
+            </div>
+
+
+        </div>
+
+
+
+        <button
+
+        onclick="calculateFootprint()"
+
+        class="calc-btn">
+
+            Calculate My Footprint
+
+        </button>
+
+
+
+        <div class="result-section">
+
+    <div id="result-card">
+
+        <h2>
+
+            🌱 Your Carbon Footprint
+
+        </h2>
+
+        <h1 id="carbon-value">
+
+            0 kg CO₂
+
+        </h1>
+
+        <h3 id="eco-score">
+
+            Eco Hero
+
+        </h3>
+
+        <p id="green-points">
+
+            Green Points: 0
+
+        </p>
+        <p id="badge">
+
+         🌿 Eco Hero Badge Earned
+
+        </p>
+    </div>
+
+
+
+    <div class="chart-card">
+
+        <h2>
+
+            Emission Breakdown
+
+        </h2>
+
+        <canvas id="myChart">
+
+        </canvas>
+
+    </div>
+ 
+    </div>
+    
+<div class="extra-section">
+
+    <div id="ai-card">
+
+        <h2>
+
+            🤖 AI Suggestions
+
+        </h2>
+
+        <div id="ai-suggestions">
+
+            Enter your details and click Calculate.
+
+        </div>
+
+    </div>
+
+
+
+    <div class="impact-card">
+
+        <h2>
+
+            🚇 Sustainable Impact
+
+        </h2>
+
+        <ul>
+
+            <li>
+
+                Reduce emissions by up to 40%
+
+            </li>
+
+            <li>
+
+                Save energy and resources
+
+            </li>
+
+            <li>
+
+                Earn Green Points 🌱
+
+            </li>
+
+            <li>
+
+                Build sustainable habits
+
+            </li>
+
+        </ul>
+
+    </div>
 
 </div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+</div>
+
+
+    </div>
+
+
+</div>
+
+
 <script src="script.js"></script>
 
 </body>
+
 </html>
+
